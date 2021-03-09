@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  background-image: linear-gradient(to right bottom, #93e2d8, #41b3a3, #42cf94);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.container {
+  background-image: url(./kiki.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  width: 48%;
+  margin: 5rem auto 0.3rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  box-shadow: 0px 0px 10px 1px black;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.678);
+  z-index: 4;
+}
+.container h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: -7rem;
+  text-shadow: 1px 1px black;
+  color: rgb(201, 41, 41);
+  position: relative;
+  z-index: 7;
+}
+.input {
+  display: flex;
+  margin: 5rem auto 2rem auto;
+  justify-content: space-between;
+  width: 80%;
+  z-index: 7;
+}
+.input label {
+  background-image: linear-gradient(to bottom right, white, red, red);
+  padding: 9px;
+  border-radius: 15px;
+  font-family: "Lobster", cursive;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px black;
+  box-shadow: 0px 0px 10px 0px black;
+  animation-name: label;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.input input {
+  padding: 9px;
+  width: 15rem;
+  border-radius: 10px;
+  outline: none;
+  border: rgb(212, 91, 91) 1px groove;
+}
+.btn2 {
+  z-index: 200;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  position: absolute;
+  padding: 9px 15px;
+  bottom: 6%;
+  transform: translate(-50%, -200%);
+  border-radius: 7px;
+  width: 30%;
+  background-image: linear-gradient(
+    to bottom right,
+    white,
+    red,
+    red,
+    red,
+    red,
+    white
+  );
+  padding: 10px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px rgb(165, 29, 29);
+  box-shadow: 0px 5px 30px 0px black;
+  cursor: pointer;
+  text-shadow: 1px 1px black;
+  transition: 1s all ease;
+}
+.btn {
+  width: 20%;
+  position: absolute;
+  padding: 9px 7px;
+  top: 2%;
+  left: 18%;
+  z-index: 5;
+  transition: 1s all ease;
+  animation-name: heart;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+.btn2:hover {
+  width: 32%;
+  padding: 11px 19px;
+  background-color: red;
+}
+@keyframes heart {
+  0% {
+    width: 20%;
+    z-index: 5;
+  }
+  50% {
+    width: 25%;
+    z-index: 7;
+  }
+  100% {
+    width: 20%;
+    z-index: 5;
+  }
+}
+@keyframes label {
+  0% {
+    padding: 9px;
+  }
+  50% {
+    padding: 10px;
+  }
+  100% {
+    padding: 9px;
+  }
+}
+.footer {
+  text-align: center;
+  /* font-family: "Pacifico", cursive; */
+  font-family: "Lobster", cursive;
+}
+.output {
+  display: none;
+}
+.love-center {
+  width: 90%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-7%, -10%);
+  z-index: 7;
+}
+.names {
+  position: relative;
+  z-index: 8;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px black;
+}
+.firstName {
+  transform: translate(-60%, -90%);
+  font-size: 20px;
+  /* box-shadow: 0px 0px 9px 0px white; */
+}
+.secondName {
+  transform: translate(40%, 20%);
+  font-size: 20px;
+}
+.and {
+  transform: translate(30%, -10%);
+  width: 100px;
+  height: 100px;
+  background-color: rgb(194, 100, 132);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 2rem;
+  font-size: 20px;
+  box-shadow: 0px 0px 9px 5px white;
+  animation-name: center;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+}
+.and:hover {
+  background-color: rgb(168, 63, 98);
+}
+.conclusion {
+  width: 70%;
+  text-align: center;
+  position: relative;
+  z-index: 9;
+  bottom: -20%;
+  font-family: "Lobster", cursive;
+  text-shadow: 1px 1px black;
+  display: none;
+  overflow: hidden;
+}
+.error {
+  background-color: red;
+  padding: 1rem;
+  position: absolute;
+  z-index: 20;
+}
+@keyframes center {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+  50% {
+    width: 110px;
+    height: 110px;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+  }
+}
+span {
+  font-family: monospace;
+}
