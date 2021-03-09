@@ -200,6 +200,20 @@ body {
 .and:hover {
   background-color: rgb(168, 63, 98);
 }
+@keyframes center {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+  50% {
+    width: 110px;
+    height: 110px;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+  }
+}
 .conclusion {
   width: 70%;
   text-align: center;
@@ -293,20 +307,21 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 70%;
   }
   .btn2 {
-    bottom: -15%;
+    bottom: 0%;
     width: 50%;
+    font-family: monospace;
   }
   .container h1 {
     text-align: center;
-    transform: translateY(70%);
+    transform: translateY(250%);
+    font-size: 20px;
   }
   .firstName {
-    transform: translate(-40%, -170%);
+    transform: translate(-20%, -170%);
     font-size: 15px;
-    /* box-shadow: 0px 0px 9px 0px white; */
   }
   .secondName {
     transform: translate(40%, -50%);
@@ -320,5 +335,12 @@ span {
   }
   .conclusion {
     bottom: -10%;
+  }
+  .input input {
+    padding: 9px;
+    width: 9rem;
+    border-radius: 10px;
+    outline: none;
+    border: rgb(212, 91, 91) 1px groove;
   }
 }
